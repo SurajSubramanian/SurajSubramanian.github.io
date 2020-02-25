@@ -46,11 +46,10 @@ def gradientDescent(theta0, theta1):
 ```
 Cost function :
 ```
-```
 def costFunction(theta0, theta1):
 ```
     returns the cost function for the given value of theta
-    ```
+```
     theta = np.transpose(np.array([theta0, theta1]))
     hypothesis = np.dot(X_one, theta)
     return (np.sum((hypothesis - Y_train)**2))/(2*np.size(X_train))
