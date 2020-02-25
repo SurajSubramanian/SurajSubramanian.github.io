@@ -1,4 +1,3 @@
-
 The following code implements Simple Linear Regression from scratch. The motive is to get a good grasp of basic concepts like computing the cost function, implementing gradient descent and using vector notations. It is suggested that you watch Andrew NGs Lectures on Linear Regression and also try out his exercises in Octave before going through this code !
 
 Importing necessary packages - numpy: for representing vectors, pandas: for reading csv files and matplotlib: for plotting our dataset :
@@ -48,7 +47,7 @@ Cost function :
 ```
 def costFunction(theta0, theta1):
 ```
-    returns the cost function for the given value of theta
+returns the cost function for the given value of theta
 ```
     theta = np.transpose(np.array([theta0, theta1]))
     hypothesis = np.dot(X_one, theta)
@@ -57,8 +56,7 @@ def costFunction(theta0, theta1):
 ```
 def iteration(theta0, theta1):
 ```
-```
-    Implements a single iteration of gradient descent and computes the cost
+Implements a single iteration of gradient descent and computes the cost
 ```
 ```
     (theta0, theta1) = gradientDescent(theta0, theta1)
@@ -66,6 +64,7 @@ def iteration(theta0, theta1):
     return (cost, theta0, theta1)
  ```
 Keep learning till there is no change in the value of theta between previous and current iteration
+```
 ```
 old_theta0 = old_theta1 = 0
 
