@@ -1,4 +1,4 @@
-The following code implements Simple Linear Regression from scratch. *The motive is to get a good grasp of basic concepts like computing the cost function, implementing gradient descent and using vector notations*. It is suggested that you watch Andrew NGs Lectures on Linear Regression and also try out his exercises in Octave before going through this code !
+The following code implements Simple Linear Regression from scratch. **The motive is to get a good grasp of basic concepts like computing the cost function, implementing gradient descent and using vector notations.** It is suggested that you watch Andrew NGs Lectures on Linear Regression and also try out his exercises in Octave before going through this code !
 
 Importing necessary packages 
 - numpy: for representing vectors, 
@@ -92,3 +92,5 @@ x = np.linspace(1.1, 10.5)
 y = (theta0) + (theta1)*x
 plt.plot(x, y, '-r' , label='y={} + {}x'.format(theta0, theta1))
 ```
+
+Thanks for reading :)
