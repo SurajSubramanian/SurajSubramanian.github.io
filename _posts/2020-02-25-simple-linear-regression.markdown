@@ -57,7 +57,9 @@ def costFunction(theta0, theta1):
 ```
 def iteration(theta0, theta1):
 ```
+```
     Implements a single iteration of gradient descent and computes the cost
+```
 ```
     (theta0, theta1) = gradientDescent(theta0, theta1)
     cost = costFunction(theta0, theta1)
