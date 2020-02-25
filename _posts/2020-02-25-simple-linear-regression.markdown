@@ -1,4 +1,4 @@
-The following code implements Simple Linear Regression from scratch. The motive is to get a good grasp of basic concepts like computing the cost function, implementing gradient descent and using vector notations. It is suggested that you watch Andrew NGs Lectures on Linear Regression and also try out his exercises in Octave before going through this code !
+The following code implements Simple Linear Regression from scratch. *The motive is to get a good grasp of basic concepts like computing the cost function, implementing gradient descent and using vector notations*. It is suggested that you watch Andrew NGs Lectures on Linear Regression and also try out his exercises in Octave before going through this code !
 
 Importing necessary packages 
 - numpy: for representing vectors, 
@@ -65,9 +65,9 @@ Implements a single iteration of gradient descent and computes the cost
     (theta0, theta1) = gradientDescent(theta0, theta1)
     cost = costFunction(theta0, theta1)
     return (cost, theta0, theta1)
- ```
+
 Keep learning till there is no change in the value of theta between previous and current iteration
-```
+
 ```
 old_theta0 = old_theta1 = 0
 
