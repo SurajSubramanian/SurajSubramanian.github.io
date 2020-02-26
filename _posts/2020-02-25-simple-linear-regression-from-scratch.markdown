@@ -27,23 +27,29 @@ plt.plot(X,Y, 'ro')
 
 <img src = "../images/fit_through_traindata.png" style="height: 400px, width: 300px">
 splitting dataset into train and test parts
+
 ```
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.50,random_state=0)
 plt.plot(X_train,Y_train, 'ro')
 ```
+
 Insert 1 to the start of each row in the input matrix as hypothesis h(x) = w0x0 + w1x1 where x0=1
+
 ```
 X_one = []
 for item in X_train:
     X_one.append([1, item])
 ```
+
 We have 2 parameters to learn : theta0 and theta1
+
 ```
 theta0 = theta1 = 0
 theta = np.transpose(np.array([theta0, theta1]))
 cost = (np.sum((np.dot(X_one, theta) - Y_train)**2))/(2*np.size(X_train))
 alpha=0.05
 ```
+
 Gradient Descent :
 ```
 def gradientDescent(theta0, theta1):
