@@ -105,7 +105,7 @@ x = np.linspace(1.1, 10.5)
 y = (theta0) + (theta1)*x
 plt.plot(x, y, '-r' , label='y={} + {}x'.format(theta0, theta1))
 ```
- width="400" height="300" /> 
+
 <img src = "https://raw.githubusercontent.com/SurajSubramanian/SurajSubramanian.github.io/master/_posts/images/fit_through_testdata.png" width="400" height="300" />
 
 Thanks for reading :)
