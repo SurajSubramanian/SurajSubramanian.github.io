@@ -1,8 +1,16 @@
+---
+layout: post
+title:  "Simple Linear Regression from scratch"
+description: Implementing Simple Linear Regression in Python from scratch
+date:   2019-05-23 21:03:36 +0530
+categories: Python MachineLearning LinearRegression
+---
+
 The following code implements Simple Linear Regression from scratch. **The motive is to get a good grasp of basic concepts like computing the cost function, implementing gradient descent and using vector notations.** It is suggested that you watch Andrew NGs Lectures on Linear Regression and also try out his exercises in Octave before going through this code !
 
-Importing necessary packages 
-- numpy: for representing vectors, 
-- pandas: for reading csv files and 
+Importing necessary packages
+- numpy: for representing vectors,
+- pandas: for reading csv files and
 - matplotlib: for plotting our dataset :
 ```
 import pandas as pd
@@ -15,7 +23,6 @@ loading dataset
 X,Y = np.loadtxt("Salary_Data.csv", skiprows=1,unpack=True, delimiter=',')
 plt.plot(X,Y, 'ro')
 ```
-
 splitting dataset into train and test parts
 ```
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.50,random_state=0)
@@ -34,11 +41,10 @@ theta = np.transpose(np.array([theta0, theta1]))
 cost = (np.sum((np.dot(X_one, theta) - Y_train)**2))/(2*np.size(X_train))
 alpha=0.05
 ```
-
 Gradient Descent :
 ```
 def gradientDescent(theta0, theta1):
-    # simultaneously updating theta0 and theta1
+# simultaneously updating theta0 and theta1
     theta = np.transpose(np.array([theta0, theta1]))
     temp0 = theta0 - ((alpha/np.size(X_train)) * (np.sum(np.dot(X_one, theta) - Y_train)) )
     temp1 = theta1 - ((alpha/np.size(X_train)) * np.dot((np.dot(X_one, theta) - Y_train), np.transpose(X_train)))
@@ -49,28 +55,21 @@ def gradientDescent(theta0, theta1):
 Cost function :
 ```
 def costFunction(theta0, theta1):
-```
-returns the cost function for the given value of theta
-```
+# returns the cost function for the given value of theta
     theta = np.transpose(np.array([theta0, theta1]))
     hypothesis = np.dot(X_one, theta)
     return (np.sum((hypothesis - Y_train)**2))/(2*np.size(X_train))
 ```
 ```
 def iteration(theta0, theta1):
-```
-Implements a single iteration of gradient descent and computes the cost
-```
-```
+# Implements a single iteration of gradient descent and computes the cost
     (theta0, theta1) = gradientDescent(theta0, theta1)
     cost = costFunction(theta0, theta1)
     return (cost, theta0, theta1)
-
+```
 Keep learning till there is no change in the value of theta between previous and current iteration
-
 ```
 old_theta0 = old_theta1 = 0
-
 for i in range (3000):
     (cost, theta0, theta1) = iteration(theta0, theta1)
     if(theta0 == old_theta0 and theta1 == old_theta1):
