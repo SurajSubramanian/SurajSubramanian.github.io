@@ -25,7 +25,7 @@ X,Y = np.loadtxt("Salary_Data.csv", skiprows=1,unpack=True, delimiter=',')
 plt.plot(X,Y, 'ro')
 ```
 
-<img src = "./images/fit_through_traindata.png" style="height: 400px, width: 300px">
+<img src = "./images/scatterplot.png" width="400" height="300">
 splitting dataset into train and test parts
 
 ```
@@ -93,7 +93,7 @@ x = np.linspace(1.1,10.5)
 y = (theta0) + (theta1)*x
 plt.plot(x, y, '-r', label='y={} + {}x'.format(theta0, theta1))
 ```
-<img src = "./images/fit_through_traindata.png">
+<img src = "./images/fit_through_traindata.png"  width="400" height="300">
 
 plottling our line through the test data
 
@@ -104,6 +104,6 @@ y = (theta0) + (theta1)*x
 plt.plot(x, y, '-r' , label='y={} + {}x'.format(theta0, theta1))
 ```
 
-<img src = "./images/fit_through_testdata.png">
+<img src = "./images/fit_through_testdata.png"  width="400" height="300">
 
 Thanks for reading :)
