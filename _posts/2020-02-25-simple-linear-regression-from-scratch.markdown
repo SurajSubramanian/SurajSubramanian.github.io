@@ -85,7 +85,7 @@ x = np.linspace(1.1,10.5)
 y = (theta0) + (theta1)*x
 plt.plot(x, y, '-r', label='y={} + {}x'.format(theta0, theta1))
 ```
-<img src = "./images/fit_through_traindata">
+<img src = "../images/fit_through_traindata">
 plottling our line through the test data
 ```
 plt.plot(X_test, Y_test, 'bo')
@@ -93,6 +93,6 @@ x = np.linspace(1.1, 10.5)
 y = (theta0) + (theta1)*x
 plt.plot(x, y, '-r' , label='y={} + {}x'.format(theta0, theta1))
 ```
-<img src = "./images/fit_through_testdata">
+<img src = "../images/fit_through_testdata">
 
 Thanks for reading :)
