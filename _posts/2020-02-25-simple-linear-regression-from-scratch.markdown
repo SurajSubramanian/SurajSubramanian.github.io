@@ -2,7 +2,7 @@
 layout: post
 title:  "Simple Linear Regression from scratch"
 description: Implementing Simple Linear Regression in Python from scratch
-date:   2019-05-23 21:03:36 +0530
+date:   2020-02-25 21:03:36 +0530
 categories: Python MachineLearning LinearRegression
 ---
 
