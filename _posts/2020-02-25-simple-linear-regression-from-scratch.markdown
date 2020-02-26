@@ -26,7 +26,6 @@ plt.plot(X,Y, 'ro')
 ```
 
 <img src = "./images/scatterplot.png" width="400" height="300" />
-![Scatterplot](/images/scatterplot.png)
 splitting dataset into train and test parts
 
 ```
