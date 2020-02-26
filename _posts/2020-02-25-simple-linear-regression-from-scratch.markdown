@@ -18,11 +18,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 ```
+
 loading dataset
 ```
 X,Y = np.loadtxt("Salary_Data.csv", skiprows=1,unpack=True, delimiter=',')
 plt.plot(X,Y, 'ro')
 ```
+
 <img src = "../images/fit_through_traindata.png" style="height: 400px, width: 300px">
 splitting dataset into train and test parts
 ```
