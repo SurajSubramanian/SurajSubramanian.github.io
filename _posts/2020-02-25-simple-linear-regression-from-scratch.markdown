@@ -25,7 +25,7 @@ X,Y = np.loadtxt("Salary_Data.csv", skiprows=1,unpack=True, delimiter=',')
 plt.plot(X,Y, 'ro')
 ```
 
-<img src = "https://github.com/SurajSubramanian/SurajSubramanian.github.io/blob/master/_posts/images/scatterplot.png" width="400" height="300" /> 
+<img src = "https://raw.githubusercontent.com/SurajSubramanian/SurajSubramanian.github.io/master/_posts/images/scatterplot.png" width="400" height="300" /> 
 splitting dataset into train and test parts
 
 ```
