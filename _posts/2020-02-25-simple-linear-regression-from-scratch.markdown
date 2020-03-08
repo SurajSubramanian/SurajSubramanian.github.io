@@ -11,21 +11,18 @@ The following code implements Multivariate Linear Regression from scratch. The c
 Importing necessary packages
 - numpy: for representing vectors,
 - pandas: for reading csv files and
-- sklearn: we use it for splitting the dataset into train and test, preprocessing, encoding and for calculating errors.
+- matplotlib : for plotting and visualization
 
 ```python
 import pandas as pd
 import numpy as np
-
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
-from sklearn.preprocessing import LabelEncoder
-labelencoder = LabelEncoder()
+import matplotlib.pyplot as plt
 ```
 
-Loading the csv file and deleting columns not needed
+loading the dataset
 ```python
-df = pd.read_csv("FuelConsumptionCo2.csv")
+X,Y = np.loadtxt("Salary_Data.csv", skiprows=1,unpack=True, delimiter=',')
+plt.plot(X,Y, 'ro')
 ```
 
 <img src = "https://raw.githubusercontent.com/SurajSubramanian/SurajSubramanian.github.io/master/_posts/images/scatterplot.png" width="400" height="300" /> 
