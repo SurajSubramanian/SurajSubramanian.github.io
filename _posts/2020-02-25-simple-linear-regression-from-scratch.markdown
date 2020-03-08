@@ -6,24 +6,26 @@ date:   2020-02-25 21:03:36 +0530
 categories: Python MachineLearning LinearRegression
 ---
 
-The following code implements Simple Linear Regression from scratch. **The motive is to get a good grasp of basic concepts like computing the cost function, implementing gradient descent and using vector notations.** It is suggested that you watch Andrew NGs Lectures on Linear Regression and also try out his exercises in Octave or Matlab before going through this code !
+The following code implements Multivariate Linear Regression from scratch. The code builds up from where we left in Simple Linear Regression. Representing our hypothesis as a function of multiple parameters is both powerful and necessary !
 
 Importing necessary packages
 - numpy: for representing vectors,
 - pandas: for reading csv files and
-- matplotlib: for plotting our dataset :
+- sklearn: we use it for splitting the dataset into train and test, preprocessing, encoding and for calculating errors.
 
 ```python
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import LabelEncoder
+labelencoder = LabelEncoder()
 ```
 
-Loading dataset
+Loading the csv file and deleting columns not needed
 ```python
-X,Y = np.loadtxt("Salary_Data.csv", skiprows=1,unpack=True, delimiter=',')
-plt.plot(X,Y, 'ro')
+df = pd.read_csv("FuelConsumptionCo2.csv")
 ```
 
 <img src = "https://raw.githubusercontent.com/SurajSubramanian/SurajSubramanian.github.io/master/_posts/images/scatterplot.png" width="400" height="300" /> 
