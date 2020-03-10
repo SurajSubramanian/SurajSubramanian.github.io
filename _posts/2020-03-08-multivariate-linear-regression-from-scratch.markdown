@@ -188,8 +188,6 @@ relevant_features
 ```
 
 
-
-
     ENGINESIZE                  0.874154
     CYLINDERS                   0.849685
     FUELCONSUMPTION_CITY        0.898039
@@ -200,22 +198,15 @@ relevant_features
     Name: CO2EMISSIONS, dtype: float64
 
 
-
 dropping the columns with low correlation, ones below 0.5
-
 
 ```python
 df = df.drop(['MAKE', 'MODEL', 'VEHICLECLASS', 'FUELTYPE', 'TRANSMISSION'], axis=1)
 ```
 
-
 ```python
 df.head()
 ```
-
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -298,22 +289,13 @@ df.head()
 </table>
 </div>
 
-
-
 We use min-max normalization. This step is really important. You could skip the following cell and try out all other cells to  get some absurd value as the MSE error
 
 
 ```python
 df=(df-df.min())/(df.max()-df.min())
-```
-
-
-```python
 df.head()
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -397,15 +379,10 @@ df.head()
 </table>
 </div>
 
-
-
-
 ```python
 y,x = df["CO2EMISSIONS"], df.drop(["CO2EMISSIONS"], axis=1)
 ```
-
 splitting the dataset into train and test functions
-
 
 ```python
 x_, y_ = x.to_numpy(), y.to_numpy()
@@ -430,32 +407,17 @@ X = np.asmatrix(X)
 
 ```python
 theta = np.zeros(((X[0].size), 1))
-```
-
-
-```python
 Y = y_train.reshape(-1,1)
-```
 
-
-```python
 h = np.dot(X, theta)
 h.shape
 ```
-
-
-
-
     (853, 1)
-
-
-
 
 ```python
 temp = np.zeros(theta.shape)
 cost = np.sum (np.dot(np.transpose(h-Y), (h-Y)))*(1/(2*X.shape[0]))
 ```
-
 
 ```python
 temp = np.zeros(theta.shape)
@@ -465,7 +427,6 @@ The gradientDescent function and the subsequent code are similar to the ones we 
 
 One thing I usually do is to examine and play with the shapes of all matrices and arrays and see how they could be combined to produce the required resultant matrix
 
-
 ```python
 def gradientDescent(theta, X):
     h = np.dot(X, theta)
@@ -474,7 +435,6 @@ def gradientDescent(theta, X):
     theta = temp
     return(theta, X, cost)
 ```
-
 
 ```python
 oldCost = 0
@@ -578,15 +538,9 @@ for i in range(0, 10000):
      [0.04899041]
      [0.04899041]]
 
-
-
 ```python
 theta
 ```
-
-
-
-
     array([[0.04899041],
            [0.04899041],
            [0.04899041],
@@ -596,10 +550,7 @@ theta
            [0.04899041],
            [0.04899041]])
 
-
-
 predicting the y values for the test dataset and evaluating our model with the MSE function
-
 
 ```python
 X_test = []
@@ -610,21 +561,11 @@ for row in x_test:
     X_test.append(r)
 ```
 
-
 ```python
 mean_squared_error(np.dot(X_test, theta), y_test)
 ```
 
-
-
-
     0.05530668773441035
 
-
-
-You can achieve way better results using the built-in sklearn function.
-
-
-```python
-
-```
+You can achieve way better results using the built-in sklearn function !
+Thanks for reading :)
