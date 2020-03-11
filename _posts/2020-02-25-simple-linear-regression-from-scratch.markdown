@@ -6,7 +6,7 @@ date:   2020-02-25 21:03:36 +0530
 categories: Python MachineLearning LinearRegression
 ---
 
-The following code implements Simple Linear Regression from scratch. The motive is to get a good grasp of basic concepts like computing the cost function, implementing gradient descent and using vector notations. It is suggested that you watch Andrew NGs Lectures on Linear Regression and also try out his exercises in Octave before going through this code !
+The following code implements Simple Linear Regression from scratch. **The motive is to get a good grasp of basic concepts like computing the cost function, implementing gradient descent and using vector notations.** It is suggested that you watch Andrew NGs Lectures on Linear Regression and also try out his exercises in Octave before going through this code !
 
 Importing necessary packages
 - numpy: for representing vectors,
