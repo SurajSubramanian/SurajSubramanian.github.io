@@ -40,3 +40,5 @@ theme: texture
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
+
+github_comments_repository:  dc25/myBlog-comments
