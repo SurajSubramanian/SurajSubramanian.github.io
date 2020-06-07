@@ -12,7 +12,7 @@ sass:
   sass_dir: _sass
 
 permalink: /posts/:title/
-texture:
+minima:
   title: Suraj Subramanian
   tagline: Machine Learning Enthusiast
   date_format: "%b %-d, %Y"
